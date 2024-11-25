@@ -1,9 +1,17 @@
 # ninja log v5
-13	721	7537478689290206	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f7a0220d1613625b
-0	731	7537478689421101	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	9ecd24df8d60d183
-15	758	7537478689681002	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	362a9e887ee011eb
-19	869	7537478690715899	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ef61c9ce28a0a6e5
-8	897	7537478691072198	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ade9e459b1901a65
-11	1060	7537478692626267	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	4977e03c0128ce8f
-6	1124	7537478693382736	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	191844ecb71bdfd9
-1124	1289	7537478694534532	X:/Git_Repos/VR_Library_1/VR_Library_1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1s5w4s1g/obj/arm64-v8a/libgame.so	aae3c4e8bed3d1
+14	889	7542490038378796	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f7a0220d1613625b
+7	950	7542490039252151	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	9ecd24df8d60d183
+0	994	7542490039763823	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ade9e459b1901a65
+16	898	7542490038788288	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	362a9e887ee011eb
+1145	1455	7542490043165180	X:/Git_Repos/VR_Library_1/VR_Library_1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1s5w4s1g/obj/arm64-v8a/libgame.so	aae3c4e8bed3d1
+20	950	7542490039277864	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ef61c9ce28a0a6e5
+10	1132	7542490041097991	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	4977e03c0128ce8f
+4	1145	7542490041260213	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	191844ecb71bdfd9
+25	930	7542529976933198	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f7a0220d1613625b
+11	972	7542529977331553	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	9ecd24df8d60d183
+21	985	7542529977508806	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	362a9e887ee011eb
+16	1045	7542529978082648	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ef61c9ce28a0a6e5
+8	1078	7542529978437856	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ade9e459b1901a65
+13	1213	7542529979804134	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	4977e03c0128ce8f
+4	1289	7542529980574918	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	191844ecb71bdfd9
+1289	1498	7542529982289395	X:/Git_Repos/VR_Library_1/VR_Library_1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1s5w4s1g/obj/arm64-v8a/libgame.so	aae3c4e8bed3d1
