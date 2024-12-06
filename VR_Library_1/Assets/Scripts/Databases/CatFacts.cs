@@ -16,30 +16,13 @@ public class CatFacts : NetworkBehaviour
         public int length;
     }
 
-    //private string defaultText = "Loading..."; // Set a default text
     private string message_text = ""; 
     public TMP_Text _messages;
 
-    //private string cat_message ="Cat Message Here";
-    //public TMP_Text input;
-    //public TMP_Text usernameInput;
-    //public string username = "Default";
-
-    //public void SetUsername()
-    //{
-    //    username = usernameInput.text;
-    //}
-
-
     void Start()
     {
-        //_messages.text = defaultText; // Ensure default text is displayed initially
         StartCoroutine(GetRequest("https://catfact.ninja/fact"));
     }
-
-
-
-
 
     IEnumerator GetRequest(string uri)
     {
@@ -77,9 +60,7 @@ public class CatFacts : NetworkBehaviour
 
     public void CallMessageRPC()
     {
-        // _messages.text = defaultText; // Reset to default text during refresh
         StartCoroutine(GetRequest("https://catfact.ninja/fact"));
-        // string message = _messages.text;
         RPC_SendMessage(message_text);
     }
 
@@ -88,13 +69,4 @@ public class CatFacts : NetworkBehaviour
     {
         _messages.text += $"{message}\n\n";
     }
-
-
-    //public void OnRefresh()
-    //{
-    //    _messages.text = defaultText; // Reset to default text during refresh
-    //    StartCoroutine(GetRequest("https://catfact.ninja/fact"));
-    //}
-
-
 }
