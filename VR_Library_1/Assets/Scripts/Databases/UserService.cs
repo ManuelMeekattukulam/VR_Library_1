@@ -1,22 +1,20 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using Fusion;
 using TMPro;
 
-public class BookService : NetworkBehaviour
+public class UserService : NetworkBehaviour
 {
     [System.Serializable]
-    public class Book
+    public class User
     {
-        public string title;
-        public string author;
-        public string isbn;
-        public int publishYear;
+        public string role;
+        public bool isEmailVerified;
+        public string name;
+        public string email;
         public string id;
-        public string description;
     }
 
     private string message_text = "";
@@ -24,7 +22,7 @@ public class BookService : NetworkBehaviour
 
     void Start()
     {
-        StartCoroutine(GetRequest("https://rnfoh-134-226-214-244.a.free.pinggy.link/v1/books/675304d2f35f15088a62a4d7")); // Replace with actual book API URL
+        StartCoroutine(GetRequest("https://rnfoh-134-226-214-244.a.free.pinggy.link/v1/users/674e563c340cac28908cfc08")); // Replace with actual user API URL
     }
 
     IEnumerator GetRequest(string uri)
@@ -37,20 +35,20 @@ public class BookService : NetworkBehaviour
             {
                 try
                 {
-                    Book book = JsonUtility.FromJson<Book>(webRequest.downloadHandler.text);
-                    if (!string.IsNullOrEmpty(book.title))
+                    User user = JsonUtility.FromJson<User>(webRequest.downloadHandler.text);
+                    if (!string.IsNullOrEmpty(user.name))
                     {
-                        message_text = $"Title: {book.title}\nAuthor: {book.author}\nISBN: {book.isbn}\nYear: {book.publishYear}\nID: {book.id}description: {book.description}\n";
+                        message_text = $"Name: {user.name}\nEmail: {user.email}\nRole: {user.role}\nEmail Verified: {user.isEmailVerified}\nID: {user.id}";
                     }
                     else
                     {
-                        message_text = "No book details found."; // Fallback if book details are empty
+                        message_text = "No user details found."; // Fallback if user details are empty
                     }
                 }
                 catch (System.Exception ex)
                 {
                     Debug.LogError($"Failed to parse JSON: {ex.Message}");
-                    message_text = "Error loading book details."; // Fallback on parse error
+                    message_text = "Error loading user details."; // Fallback on parse error
                 }
             }
             else
@@ -63,10 +61,10 @@ public class BookService : NetworkBehaviour
 
     public void CallMessageRPC()
     {
-        StartCoroutine(GetRequest("https://rnfoh-134-226-214-244.a.free.pinggy.link/v1/books/675304d2f35f15088a62a4d7")); // Replace with actual book API URL
+        StartCoroutine(GetRequest("https://rnfoh-134-226-214-244.a.free.pinggy.link/v1/users/674e563c340cac28908cfc08")); // Replace with actual user API URL
         RPC_SendMessage(message_text);
     }
- 
+
     [Rpc(RpcSources.All, RpcTargets.All)]
     public void RPC_SendMessage(string message, RpcInfo rpcInfo = default)
     {
